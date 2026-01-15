@@ -1,5 +1,5 @@
 let currentMovie = null;
-const SEAT_PRICE = 150; // Price of one ticket in UAH
+const SEAT_PRICE = 150;
 
 async function loadMovieDetails() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -13,17 +13,17 @@ async function loadMovieDetails() {
         if (currentMovie) {
             document.title = `Film: "${currentMovie.title}"`;
             document.getElementById('movieTitle').innerText = currentMovie.title;
-            document.getElementById('moviePoster').src = currentMovie.poster;
+            document.getElementById('moviePoster').src = './' + currentMovie.poster;
             document.getElementById('movieDesc').innerText = currentMovie.description;
 
-            // Check movie status
+            
             if (currentMovie.status === 'soon') {
                 // For "coming soon" movies show subscription form
                 document.getElementById('bookingAside').style.display = 'none';
                 document.getElementById('subscriptionAside').style.display = 'block';
                 initSubscriptionForm();
             } else {
-                // For in-theater movies show date/time selection
+          
                 document.getElementById('subscriptionAside').style.display = 'none';
                 document.getElementById('bookingAside').style.display = 'block';
                 initBooking();
@@ -63,7 +63,7 @@ function updateTimeSlots(selectedDate) {
     const slotsGrid = document.getElementById('slotsGrid');
     const confirmBtn = document.getElementById('confirmBtn');
     slotsGrid.innerHTML = '';
-    confirmBtn.style.visibility = 'hidden'; // Hide button
+    confirmBtn.style.visibility = 'hidden';
 
     currentMovie.schedule[selectedDate].forEach(time => {
         const btn = document.createElement('button');
@@ -74,7 +74,7 @@ function updateTimeSlots(selectedDate) {
                 if (b !== confirmBtn) b.classList.remove('active');
             });
             btn.classList.add('active');
-            confirmBtn.style.visibility = 'visible'; // Show button
+            confirmBtn.style.visibility = 'visible';
         };
         slotsGrid.appendChild(btn);
     });
@@ -88,18 +88,14 @@ function initSubscriptionForm() {
         e.preventDefault();
         const email = document.getElementById('subEmail').value;
         
-        // Log data
         console.log('Subscription:', { email, movieId: currentMovie.id });
         
-        // Hide form
         form.style.display = 'none';
         
-        // Show success message
         const thankYouMessage = document.createElement('div');
         thankYouMessage.className = 'thank-you-message';
         thankYouMessage.innerHTML = '<h3>Thank you for subscribing!</h3><p>Expect a notification about the release of <strong>' + currentMovie.title + '</strong> at <strong>' + email + '</strong></p>';
         
-        // Insert message in place of form
         subscriptionAside.appendChild(thankYouMessage);
     };
 }

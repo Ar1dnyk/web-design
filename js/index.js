@@ -17,14 +17,14 @@ async function loadPopularFilms() {
 
 function renderFilms() {
     const track = document.getElementById('filmsTrack');
-    track.innerHTML = ''; // Очищаємо
+    track.innerHTML = '';
 
     popularMovies.forEach(film => {
         const filmDiv = document.createElement('div');
         filmDiv.className = 'film';
         filmDiv.setAttribute('data-id', film.id);
         filmDiv.innerHTML = `
-            <img src="${film.poster}" alt="${film.title}">
+            <img src="./${film.poster}" alt="${film.title}">
             <p>${film.title}</p>
         `;
         track.appendChild(filmDiv);
@@ -68,5 +68,5 @@ function updateTrackPosition() {
     track.style.transform = `translateX(-${index * filmWidth}px)`;
 }
 
-// Завантажуємо популярні фільми при завантаженні сторінки
+
 loadPopularFilms();
