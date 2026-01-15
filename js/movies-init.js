@@ -1,0 +1,1 @@
+loadMoviesByStatus('all');

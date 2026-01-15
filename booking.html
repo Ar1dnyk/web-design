@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вибір місць</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/booking.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">logo</span>
+            <nav>
+                <ul>
+                    <li class="btn"><a href="#" onclick="history.back()">Назад до фільму</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container booking-container">
+            <section class="hall-section">
+                <h2 id="bookingTitle">Назва фільму</h2>
+                <p id="bookingDetails">Дата та час</p>
+                <div class="screen">ЕКРАН</div>
+                <div id="hallContainer"></div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-text">Вільне</span>
+                        <span class="seat"></span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-text">Обране</span>
+                        <span class="seat selected"></span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-text">Зайняте</span>
+                        <span class="seat occupied"></span>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="cart-section">
+                <h3>Ваше замовлення</h3>
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-msg">Місця не обрано</p>
+                </div>
+                <div class="cart-footer">
+                    <p>Разом: <span id="totalPrice">0</span> грн</p>
+                    <button id="payBtn" class="pay-btn" disabled>Оплатити</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="/js/booking-init.js"></script>
+</body>
+</html>

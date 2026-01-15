@@ -1,0 +1,100 @@
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.movie-card {
+    cursor: pointer;
+    display: flex;
+    background: #1c1c1c;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 250px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background: #252525;
+}
+
+.movie-card img {
+    width: 180px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-poster {
+    flex-shrink: 0;
+}
+
+.movie-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.movie-info h4 {
+    order: 1;
+    font-size: 18px;
+    margin: 0;
+}
+
+.movie-info .description {
+    order: 2;
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.status {
+    order: 3;
+    margin-top: auto;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    text-transform: capitalize;
+}
+
+.status.now {
+    background: #c01313;
+}
+
+.status.soon {
+    background: #444;
+}
+
+/* кнопака Viev more */
+
+.load-more {
+    display: block;
+    margin: 40px auto; /* Центрування */
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid  #c01313;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.load-more:hover {
+    background:  #960909;
+    border-color: #666;
+}
+
+/* Додатково: вирівнювання заголовка секції */
+.movies h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}

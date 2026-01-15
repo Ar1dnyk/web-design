@@ -1,0 +1,214 @@
+.movie-detail-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Ліва частина ширша за праву */
+    gap: 60px;
+    padding-top: 50px;
+}
+
+/* Ліва колонка */
+.movie-main-info {
+    display: flex;
+    gap: 30px;
+}
+
+.large-poster {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.text-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.full-description {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Права колонка */
+.booking-aside {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.date-selector select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.time-slots {
+    margin-top: 30px;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-btn {
+    padding: 10px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.time-btn.active, .time-btn:hover {
+    background: #c01313;
+    border-color: #c01313;
+}
+
+.booking-summary { 
+    margin-top: 30px; 
+    border-top: 1px solid #333; 
+    padding-top: 20px; 
+}
+
+.subscription-aside {
+    padding: 30px;
+}
+
+.subscription-aside h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.subscription-aside p {
+    color: #bbb;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.subscription-aside .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.subscription-aside .form-group label {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.subscription-aside .form-group input {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: white;
+    padding: 12px 15px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.subscription-aside .form-group input:focus {
+    outline: none;
+    border-color: #c01313;
+    box-shadow: 0 0 5px rgba(192, 19, 19, 0.3);
+}
+
+.subscription-aside .submit-btn {
+    background: #c01313;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.subscription-aside .submit-btn:hover {
+    background: #960909;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #c01313;
+    box-shadow: 0 0 5px rgba(192, 19, 19, 0.3);
+}
+
+#subscriptionForm {
+    margin-top: 20px;
+}
+
+.success-message {
+    background: #2d5f2e;
+    border: 1px solid #4a9d4b;
+    color: #a8d5aa;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.thank-you-message {
+    background: linear-gradient(135deg, #2d5f2e 0%, #3a7a3a 100%);
+    border: 2px solid #4a9d4b;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you-message h3 {
+    color: #a8d5aa;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.thank-you-message p {
+    color: #a8d5aa;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.thank-you-message strong {
+    color: #fff;
+    font-weight: 600;
+}

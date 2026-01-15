@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "title": "Interstellar",
+    "poster": "/img/interstellar.jpg",
+    "description": "A breathtaking journey through space and time to save humanity.",
+    "status": "now",
+    "isPopular": true,
+    "schedule": {
+      "2026-01-14": ["10:00", "14:20", "19:00", "22:15"],
+      "2026-01-15": ["11:30", "16:00", "21:00"],
+      "2026-01-16": ["10:00", "15:00", "19:00"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Avatar",
+    "poster": "/img/avatar.jpg",
+    "description": "An epic sci-fi adventure on the distant planet of Pandora.",
+    "status": "now",
+    "isPopular": true,
+    "schedule": {
+      "2026-01-14": ["11:30", "15:00", "18:45"],
+      "2026-01-15": ["12:00", "17:30", "21:00"],
+      "2026-01-16": ["11:00", "15:00", "20:00"]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Avatar 3",
+    "poster": "/img/avatar3.jpg",
+    "description": "The next chapter of the legendary saga returns to Pandora.",
+    "status": "soon",
+    "isPopular": false,
+    "schedule": {}
+  },
+  {
+    "id": 4,
+    "title": "Dune: Part Two",
+    "poster": "/img/dune2.jpg",
+    "description": "Paul Atreides rises as destiny unfolds on the desert planet.",
+    "status": "now",
+    "isPopular": true,
+    "schedule": {
+      "2026-01-14": ["12:00", "16:00", "20:00"],
+      "2026-01-15": ["13:00", "18:00", "21:30"],
+      "2026-01-16": ["12:00", "17:00", "22:00"]
+    }
+  },
+  {
+    "id": 5,
+    "title": "Oppenheimer",
+    "poster": "/img/oppenheimer.jpg",
+    "description": "A dramatic portrait of the man behind the atomic bomb.",
+    "status": "now",
+    "isPopular": true,
+    "schedule": {
+      "2026-01-14": ["10:00", "13:30", "17:00", "20:30"],
+      "2026-01-15": ["11:00", "15:00", "19:00"],
+      "2026-01-16": ["10:30", "14:30", "18:30"]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Inception",
+    "poster": "/img/inception.jpg",
+    "description": "A mind-bending thriller that dives deep into the world of dreams.",
+    "status": "now",
+    "isPopular": true,
+    "schedule": {
+      "2026-01-14": ["14:00", "19:30"],
+      "2026-01-15": ["15:00", "20:30"],
+      "2026-01-16": ["13:00", "18:00"]
+    }
+  },
+  {
+    "id": 7,
+    "title": "Harry Potter and the Philosopher’s Stone",
+    "poster": "/img/harrypotter1.jpg",
+    "description": "The magical beginning of a young wizard’s journey.",
+    "status": "now",    "isPopular": false,    "schedule": {
+      "2026-01-14": ["10:30", "13:00", "15:45"],
+      "2026-01-15": ["10:00", "12:30", "15:00"],
+      "2026-01-16": ["11:00", "14:00", "17:00"]
+    }
+  },
+  {
+    "id": 8,
+    "title": "Harry Potter: Return to Hogwarts",
+    "poster": "/img/harry20.jpg",
+    "description": "A nostalgic reunion celebrating the magic of Hogwarts.",
+    "status": "soon",
+    "isPopular": false,
+    "schedule": {}
+  },
+  {
+    "id": 9,
+    "title": "Joker",
+    "poster": "/img/joker.jpg",
+    "description": "A dark psychological story of Gotham’s most infamous villain.",
+    "status": "now",    "isPopular": true,    "schedule": {
+      "2026-01-14": ["18:00", "21:00"],
+      "2026-01-15": ["19:00", "22:00"],
+      "2026-01-16": ["18:30", "21:30"]
+    }
+  },
+  {
+    "id": 10,
+    "title": "Formula 1",
+    "poster": "/img/f1.jpg",
+    "description": "High-speed drama from the world of professional racing.",
+    "status": "now",
+    "isPopular": false,
+    "schedule": {
+      "2026-01-14": ["12:00", "15:00"],
+      "2026-01-15": ["13:00", "16:00"],
+      "2026-01-16": ["11:30", "14:30"]
+    }
+  },
+  {
+    "id": 11,
+    "title": "The King’s Man",
+    "poster": "/img/kingsman.jpg",
+    "description": "The origins of the world’s first independent intelligence agency.",
+    "status": "now",    "isPopular": false,    "schedule": {
+      "2026-01-14": ["14:15", "17:30", "20:45"],
+      "2026-01-15": ["15:00", "18:15", "21:30"],
+      "2026-01-16": ["14:00", "17:00", "20:00"]
+    }
+  },
+  {
+    "id": 12,
+    "title": "Spider-Man 3",
+    "poster": "/img/spiderman3.jpg",
+    "description": "Peter Parker faces his darkest challenges yet.",
+    "status": "now",
+    "isPopular": false,
+    "schedule": {
+      "2026-01-14": ["11:00", "16:30", "21:15"],
+      "2026-01-15": ["12:00", "17:00", "22:00"],
+      "2026-01-16": ["11:30", "15:30", "20:30"]
+    }
+  },
+  {
+    "id": 13,
+    "title": "Deadpool",
+    "poster": "/img/deadpool.jpg",
+    "description": "A fast-paced, irreverent superhero action comedy.",
+    "status": "now",
+    "isPopular": false,
+    "schedule": {
+      "2026-01-14": ["19:00", "21:30", "23:50"],
+      "2026-01-15": ["20:00", "22:30"],
+      "2026-01-16": ["19:30", "22:00", "00:00"]
+    }
+  },
+  {
+    "id": 14,
+    "title": "Deadpool 2",
+    "poster": "/img/deadpool2.jpg",
+    "description": "The merc with a mouth returns with even more chaos.",
+    "status": "soon",
+    "isPopular": false,
+    "schedule": {}
+  },
+  {
+    "id": 15,
+    "title": "28 Days Later",
+    "poster": "/img/28days.jpg",
+    "description": "A terrifying survival story in a post-apocalyptic world.",
+    "status": "now",
+    "isPopular": false,
+    "schedule": {
+      "2026-01-14": ["22:00", "00:15"],
+      "2026-01-15": ["23:00"],
+      "2026-01-16": ["22:30", "00:45"]
+    }
+  },
+  {
+    "id": 16,
+    "title": "The Hobbit: The Desolation of Smaug",
+    "poster": "/img/hobbit.jpg",
+    "description": "Bilbo and the dwarves face dragons and darkness.",
+    "status": "now",
+    "isPopular": false,
+    "schedule": {
+      "2026-01-14": ["13:00", "17:45"],
+      "2026-01-15": ["14:00", "18:30"],
+      "2026-01-16": ["12:30", "16:00", "20:00"]
+    }
+  }
+]

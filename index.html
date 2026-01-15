@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Sessions</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">logo</span>
+
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="/now.html">Now in cinema</a>
+                    </li>
+                    <li>
+                        <a href="/coming-soon.html">Comming soon</a>
+                    </li>
+                    <li class="btn">
+                        <a href="/contact.html">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container hero">
+            <img src="/img/cinema_photo.jpeg" alt="Cinema">
+            <h1 class="img-title">MOONLIGHT CINEMA</h1>
+        </div>
+
+        <div class="container trending">
+            <h3>Popular choice</h3>
+
+            <div class="films-wrapper">
+                <button class="arrow left">&#10094;</button>
+
+                <div class="films-window">
+                    <div class="films-track" id="filmsTrack">
+                        <!-- Фільми завантажуються динамічно з JSON -->
+                    </div>
+                </div>
+
+                <button class="arrow right">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
