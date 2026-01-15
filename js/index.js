@@ -40,7 +40,7 @@ function attachEventListeners() {
         film.style.cursor = 'pointer';
         film.addEventListener('click', () => {
             const movieId = film.getAttribute('data-id');
-            window.location.href = `/movie-info.html?id=${movieId}`;
+            window.location.href = `./movie-info.html?id=${movieId}`;
         });
     });
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Завантаження...</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/movie-info.css">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/movie-info.css">
 </head>
 <body>
     <div class="wrapper">
@@ -12,10 +12,10 @@
             <span class="logo">logo</span>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="now.html">Now in cinema</a></li>
-                    <li><a href="coming-soon.html">Coming soon</a></li>
-                    <li class="btn"><a href="/contact.html">Contact us</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./now.html">Now in cinema</a></li>
+                    <li><a href="./coming-soon.html">Coming soon</a></li>
+                    <li class="btn"><a href="./contact.html">Contact us</a></li>
                 </ul>
             </nav>
         </header>
@@ -24,38 +24,38 @@
             <section class="movie-main-info">
                 <img id="moviePoster" src="" alt="" class="large-poster">
                 <div class="text-content">
-                    <h1 id="movieTitle">Завантаження...</h1>
-                    <p id="movieDesc" class="full-description">Завантаження опису...</p>
+                    <h1 id="movieTitle">Loading...</h1>
+                    <p id="movieDesc" class="full-description">Loading description...</p>
                 </div>
             </section>
 
             <aside class="booking-aside" id="bookingAside">
-                <h2>Оберіть сеанс</h2>
+                <h2>Select a session</h2>
                 <div class="date-selector">
-                    <label>Дата:</label>
+                    <label>Date:</label>
                     <select id="sessionDate"></select>
                 </div>
                 <div class="time-slots">
-                    <h3>Доступний час:</h3>
+                    <h3>Available time:</h3>
                     <div class="slots-grid" id="slotsGrid"></div>
-                    <button id="confirmBtn" class="time-btn" style="width: 100%; margin-top: 15px;">Купити квитки</button>
+                    <button id="confirmBtn" class="time-btn" style="width: 100%; margin-top: 15px;">Buy tickets</button>
                 </div>
             </aside>
 
             <aside class="booking-aside subscription-aside" id="subscriptionAside" style="display: none;">
-                <h2>Сповіщення про вихід фільму</h2>
-                <p>Фільм ще не в прокаті. Залиште свій email, щоб отримати сповіщення коли він вийде!</p>
+                <h2>Movie Release Notification</h2>
+                <p>This movie is not yet in theaters. Leave your email to get notified when it's released!</p>
                 <form id="subscriptionForm">
                     <div class="form-group">
-                        <label for="subEmail">Ваш email:</label>
+                        <label for="subEmail">Your email:</label>
                         <input type="email" id="subEmail" name="email" required placeholder="your@email.com">
                     </div>
-                    <button type="submit" class="submit-btn" id="subBtn">Підписатися</button>
+                    <button type="submit" class="submit-btn" id="subBtn">Subscribe</button>
                 </form>
             </aside>
         </main>
     </div>
 
-    <script src="/js/movie-info.js"></script>
+    <script src="./js/movie-info.js"></script>
 </body>
 </html>

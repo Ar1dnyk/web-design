@@ -50,7 +50,7 @@ function renderMovies() {
         `;
 
         card.addEventListener('click', () => {
-            window.location.href = `/movie-info.html?id=${movie.id}`;
+            window.location.href = `./movie-info.html?id=${movie.id}`;
         });
 
         grid.appendChild(card);

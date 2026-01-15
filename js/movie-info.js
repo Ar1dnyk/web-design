@@ -1,5 +1,5 @@
 let currentMovie = null;
-const SEAT_PRICE = 150; // Ціна одного квитка
+const SEAT_PRICE = 150; // Price of one ticket in UAH
 
 async function loadMovieDetails() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -16,14 +16,14 @@ async function loadMovieDetails() {
             document.getElementById('moviePoster').src = currentMovie.poster;
             document.getElementById('movieDesc').innerText = currentMovie.description;
 
-            // Перевіряємо статус фільму
+            // Check movie status
             if (currentMovie.status === 'soon') {
-                // Для "coming soon" фільмів показуємо форму підписки
+                // For "coming soon" movies show subscription form
                 document.getElementById('bookingAside').style.display = 'none';
                 document.getElementById('subscriptionAside').style.display = 'block';
                 initSubscriptionForm();
             } else {
-                // Для фільмів в прокаті показуємо вибір дати/часу
+                // For in-theater movies show date/time selection
                 document.getElementById('subscriptionAside').style.display = 'none';
                 document.getElementById('bookingAside').style.display = 'block';
                 initBooking();
@@ -40,7 +40,7 @@ function initBooking() {
         dates.forEach(date => {
             const option = document.createElement('option');
             option.value = date;
-            option.innerText = new Date(date).toLocaleDateString('uk-UA', {day:'numeric', month:'long'});
+            option.innerText = new Date(date).toLocaleDateString('en-US', {day:'numeric', month:'long'});
             dateSelector.appendChild(option);
         });
         dateSelector.onchange = () => updateTimeSlots(dateSelector.value);
@@ -51,7 +51,7 @@ function initBooking() {
     confirmBtn.onclick = () => {
         const selectedTime = document.querySelector('.time-btn.active');
         if (!selectedTime) {
-            alert('Будь ласка, оберіть час сеансу');
+            alert('Please select a time slot');
             return;
         }
         const selectedDate = document.getElementById('sessionDate').value;
@@ -63,7 +63,7 @@ function updateTimeSlots(selectedDate) {
     const slotsGrid = document.getElementById('slotsGrid');
     const confirmBtn = document.getElementById('confirmBtn');
     slotsGrid.innerHTML = '';
-    confirmBtn.style.visibility = 'hidden'; // Прячем кнопку
+    confirmBtn.style.visibility = 'hidden'; // Hide button
 
     currentMovie.schedule[selectedDate].forEach(time => {
         const btn = document.createElement('button');
@@ -74,7 +74,7 @@ function updateTimeSlots(selectedDate) {
                 if (b !== confirmBtn) b.classList.remove('active');
             });
             btn.classList.add('active');
-            confirmBtn.style.visibility = 'visible'; // Показуємо кнопку
+            confirmBtn.style.visibility = 'visible'; // Show button
         };
         slotsGrid.appendChild(btn);
     });
@@ -88,18 +88,18 @@ function initSubscriptionForm() {
         e.preventDefault();
         const email = document.getElementById('subEmail').value;
         
-        // Логування даних
-        console.log('Підписка:', { email, movieId: currentMovie.id });
+        // Log data
+        console.log('Subscription:', { email, movieId: currentMovie.id });
         
-        // Приховуємо форму
+        // Hide form
         form.style.display = 'none';
         
-        // Показуємо повідомлення про успіх
+        // Show success message
         const thankYouMessage = document.createElement('div');
         thankYouMessage.className = 'thank-you-message';
-        thankYouMessage.innerHTML = '<h3>Дякую за підписку!</h3><p>Очікуйте повідомлення про вихід фільму <strong>' + currentMovie.title + '</strong> на адресу <strong>' + email + '</strong></p>';
+        thankYouMessage.innerHTML = '<h3>Thank you for subscribing!</h3><p>Expect a notification about the release of <strong>' + currentMovie.title + '</strong> at <strong>' + email + '</strong></p>';
         
-        // Вставляємо повідомлення на місце форми
+        // Insert message in place of form
         subscriptionAside.appendChild(thankYouMessage);
     };
 }

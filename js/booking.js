@@ -7,7 +7,7 @@ async function initBooking() {
     const date = params.get('date');
     const time = params.get('time');
 
-    // Завантажуємо інфо про фільм для заголовка
+    // Load movie info for the title
     const resp = await fetch('./movies.json');
     const movies = await resp.json();
     const movie = movies.find(m => m.id == movieId);
@@ -17,7 +17,7 @@ async function initBooking() {
         document.getElementById('bookingDetails').innerText = `${date} | ${time}`;
     }
 
-    renderHall(7, 12); // Зал 7 рядів, 12 місць
+    renderHall(7, 12); // Hall: 7 rows, 12 seats
 }
 
 function renderHall(rows, cols) {
@@ -29,14 +29,14 @@ function renderHall(rows, cols) {
             const seat = document.createElement('div');
             seat.className = 'seat';
             
-            // Рандомно робимо деякі місця зайнятими (для вигляду)
+            // Randomly make some seats occupied (for appearance)
             if (Math.random() < 0.2) seat.classList.add('occupied');
 
             seat.onclick = () => {
                 if (seat.classList.contains('occupied')) return;
                 
                 seat.classList.toggle('selected');
-                const seatInfo = `Ряд ${r}, Місце ${s}`;
+                const seatInfo = `Row ${r}, Seat ${s}`;
                 
                 if (seat.classList.contains('selected')) {
                     selectedSeats.push({id: `${r}-${s}`, label: seatInfo});
@@ -57,13 +57,13 @@ function updateCart() {
     const payBtn = document.getElementById('payBtn');
 
     if (selectedSeats.length === 0) {
-        cartItems.innerHTML = '<p class="empty-msg">Місця не обрано</p>';
+        cartItems.innerHTML = '<p class="empty-msg">No seats selected</p>';
         payBtn.disabled = true;
     } else {
         cartItems.innerHTML = selectedSeats.map(seat => `
             <div class="cart-item">
                 <span>${seat.label}</span>
-                <span>${SEAT_PRICE} грн</span>
+                <span>${SEAT_PRICE} UAH</span>
             </div>
         `).join('');
         payBtn.disabled = false;

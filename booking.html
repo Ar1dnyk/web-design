@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Вибір місць</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/booking.css">
+    <title>Select Seats</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/booking.css">
 </head>
 <body>
     <div class="wrapper">
@@ -12,46 +12,46 @@
             <span class="logo">logo</span>
             <nav>
                 <ul>
-                    <li class="btn"><a href="#" onclick="history.back()">Назад до фільму</a></li>
+                    <li class="btn"><a href="#" onclick="history.back()">Back to movie</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="container booking-container">
             <section class="hall-section">
-                <h2 id="bookingTitle">Назва фільму</h2>
-                <p id="bookingDetails">Дата та час</p>
-                <div class="screen">ЕКРАН</div>
+                <h2 id="bookingTitle">Movie Title</h2>
+                <p id="bookingDetails">Date and time</p>
+                <div class="screen">SCREEN</div>
                 <div id="hallContainer"></div>
                 
                 <div class="legend">
                     <div class="legend-item">
-                        <span class="legend-text">Вільне</span>
+                        <span class="legend-text">Available</span>
                         <span class="seat"></span>
                     </div>
                     <div class="legend-item">
-                        <span class="legend-text">Обране</span>
+                        <span class="legend-text">Selected</span>
                         <span class="seat selected"></span>
                     </div>
                     <div class="legend-item">
-                        <span class="legend-text">Зайняте</span>
+                        <span class="legend-text">Occupied</span>
                         <span class="seat occupied"></span>
                     </div>
                 </div>
             </section>
 
             <aside class="cart-section">
-                <h3>Ваше замовлення</h3>
+                <h3>Your order</h3>
                 <div id="cartItems" class="cart-items">
-                    <p class="empty-msg">Місця не обрано</p>
+                    <p class="empty-msg">No seats selected</p>
                 </div>
                 <div class="cart-footer">
-                    <p>Разом: <span id="totalPrice">0</span> грн</p>
-                    <button id="payBtn" class="pay-btn" disabled>Оплатити</button>
+                    <p>Total: <span id="totalPrice">0</span> UAH</p>
+                    <button id="payBtn" class="pay-btn" disabled>Pay</button>
                 </div>
             </aside>
         </main>
     </div>
-    <script src="/js/booking-init.js"></script>
+    <script src="./js/booking-init.js"></script>
 </body>
 </html>
