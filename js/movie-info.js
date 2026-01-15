@@ -16,14 +16,11 @@ async function loadMovieDetails() {
             document.getElementById('moviePoster').src = './' + currentMovie.poster;
             document.getElementById('movieDesc').innerText = currentMovie.description;
 
-            
             if (currentMovie.status === 'soon') {
-                // For "coming soon" movies show subscription form
                 document.getElementById('bookingAside').style.display = 'none';
                 document.getElementById('subscriptionAside').style.display = 'block';
                 initSubscriptionForm();
             } else {
-          
                 document.getElementById('subscriptionAside').style.display = 'none';
                 document.getElementById('bookingAside').style.display = 'block';
                 initBooking();

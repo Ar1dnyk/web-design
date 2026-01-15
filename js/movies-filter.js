@@ -38,7 +38,7 @@ function renderMovies() {
         card.className = 'movie-card';
         card.innerHTML = `
             <div class="movie-poster">
-                <img src="${movie.poster}" alt="${movie.title}">
+                <img src="./${movie.poster}" alt="${movie.title}">
             </div>
             <div class="movie-info">
                 <h4>${movie.title}</h4>

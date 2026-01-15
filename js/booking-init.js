@@ -7,7 +7,6 @@ async function initBooking() {
     const date = params.get('date');
     const time = params.get('time');
 
-    // Load movie info for the title
     const resp = await fetch('./movies.json');
     const movies = await resp.json();
     const movie = movies.find(m => m.id == movieId);
@@ -17,7 +16,7 @@ async function initBooking() {
         document.getElementById('bookingDetails').innerText = `${date} | ${time}`;
     }
 
-    renderHall(7, 12); // Hall: 7 rows, 12 seats
+    renderHall(7, 12);
 }
 
 function renderHall(rows, cols) {
@@ -29,7 +28,6 @@ function renderHall(rows, cols) {
             const seat = document.createElement('div');
             seat.className = 'seat';
             
-            // Randomly make some seats occupied (for appearance)
             if (Math.random() < 0.2) seat.classList.add('occupied');
 
             seat.onclick = () => {
